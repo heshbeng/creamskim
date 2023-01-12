@@ -24,22 +24,8 @@ const beep = require('beepbeep');
 
 const keyEncoded = require('./kraken_keys_encoded.json');
 
-const keyDecode = (key) => {
-  
-  /* // encoding algorithm
-  const buffer = Buffer.from('TYPE_KEY_HERE');
-  const string = buffer.toString('base64');
-  return string;
-  */
-
-  // decoding algorithm
-  const buf = Buffer.from(key, 'base64');
-  const str = buf.toString('ascii');
-  return str;
-};
-
-const keyPub = keyDecode(keyEncoded.trade.pub);
-const keyPriv = keyDecode(keyEncoded.trade.priv);
+const keyPub = /* PUBLIC TRADING KEY */;
+const keyPriv = /* PRIVATE TRADING KEY */;
 
 const KrakenClient = require('kraken-api');
 const kraken = new KrakenClient(keyPub, keyPriv);
